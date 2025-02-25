@@ -1,0 +1,188 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+#main_wrap{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:10%;
+    margin: auto;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+    background-color: rgb(181 218 230);
+    border-radius: 50px;
+}
+p{
+    font-size: 45px;
+    text-decoration-style: double;
+    text-decoration-line: underline;
+    color: lightslategrey;
+    text-align: center;
+    width:100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+#hand-2{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 380px;
+    animation: hand_anim_1 2s linear infinite alternate;
+    transform: translatey(-140px);
+        -ms-transform: translatey(-140px);
+        -webkit-transform: translatey(-140px);
+        -moz-transform: translatey(-140px);
+}
+
+
+@keyframes hand_anim_1 {
+    0%{
+        transform: translatey(-140px);
+        -ms-transform: translatey(-140px);
+        -webkit-transform: translatey(-140px);
+        -moz-transform: translatey(-140px);
+    }
+
+    100%{
+        transform: translatey(-90px);
+        -ms-transform: translatey(-90px);
+        -webkit-transform: translatey(-90px);
+        -moz-transform: translatey(-90px);
+    }
+    
+}
+
+#cloud_1{
+    animation: cloud_1_anim 15s linear infinite alternate;
+    transform: translatex(600px);
+    -ms-transform: translatex(600px);
+    -webkit-transform: translatex(600px);
+    -moz-transform: translatex(600px);
+    width:100px;
+    height:100px;
+}
+
+@keyframes cloud_1_anim {
+    0%{
+        transform: translatex(0px);
+        -ms-transform: translatex(0px);
+        -webkit-transform: translatex(0px);
+        -moz-transform: translatex(0px);
+    }
+    100%{
+        transform: translatex(600px);
+        -ms-transform: translatex(600px);
+        -webkit-transform: translatex(600px);
+        -moz-transform: translatex(600px);
+    }
+    
+}
+
+
+#cloud_2{
+    animation: cloud_2_anim 10s linear infinite alternate-reverse;
+    transform: translatex(600px);
+    -ms-transform: translatex(600px);
+    -webkit-transform: translatex(600px);
+    -moz-transform: translatex(600px);
+    width:100px;
+    height:100px;
+    top: 50px;
+    position: absolute;
+}
+
+@keyframes cloud_2_anim {
+    0%{
+        transform: translatex(0px);
+        -ms-transform: translatex(0px);
+        -webkit-transform: translatex(0px);
+        -moz-transform: translatex(0px);
+    }
+    100%{
+        transform: translatex(600px);
+        -ms-transform: translatex(600px);
+        -webkit-transform: translatex(600px);
+        -moz-transform: translatex(600px);
+    }
+    
+}
+
+
+
+#main_wrap .buildings,
+#main_wrap .sky,
+#main_wrap .road {
+  position: absolute;
+  height: 100%;
+  width: 200%;
+}
+
+#main_wrap img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#main_wrap .buildings {
+    margin-top:-104px;
+  animation: move-left 8s linear infinite;
+}
+
+#main_wrap .road {
+  animation: move-left 7s linear infinite;
+}
+
+
+
+@keyframes move-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+#main_wrap .bus {
+    position: absolute;
+    bottom: 5px;
+    left: 150px;
+    z-index: 200;
+    width: 250px;
+  }
+  
+  #main_wrap .bus svg {
+    width: 100%;
+  }
+  
+  #main_wrap .bus #body {
+    animation: bounce 700ms ease-in-out infinite;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(4px);
+    }
+  }
+  
+  #main_wrap .bus #wheel_left,
+  #main_wrap .bus #wheel_right {
+    transform-box: fill-box;
+    transform-origin: 40px;
+    animation: spin 800ms linear infinite;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
